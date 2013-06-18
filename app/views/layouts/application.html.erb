@@ -7,8 +7,28 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <header>
+    <section>
+      <%= yield :header %>
+    </section>
+  </header>
 
-<%= yield %>
+  <section id="wrapper" class="clearfix">
+    <%= yield :left_sidebar %>
+    <%= yield :right_sidebar %>
+    <section class="main">
+      <%= yield %>
+    </section>
+  </section>
 
+  <footer>
+    <section>
+      <h2>Slogan reklamowy naszej firmy</h2>
+      <p>
+        Tekst majacy na celu zachecenie klienta aby u nas kupowal.<br />
+        Skoro sszedl tak nisko strony to trzeba go zachecic aby wrocil do gory.
+      </p>
+    </section>
+  </footer
 </body>
 </html>

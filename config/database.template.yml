@@ -15,4 +15,3 @@ production:
   encoding: unicode
   database: store_production
   pool: 5
-

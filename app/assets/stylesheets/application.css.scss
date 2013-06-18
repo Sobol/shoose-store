@@ -1,0 +1,99 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ */
+
+html {
+  width: 100%;
+  background: url('bg.jpeg') repeat top left;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  color: #5E5E5E;
+}
+
+body {
+  width: 100%;
+  min-height: 900px;
+  background: url('main_bg.jpg') no-repeat;
+}
+
+header {
+  width: 100%;
+  position: absolute;
+  margin-top: 80px;
+
+  section {
+    width: 970px;
+    height: 70px;
+    margin: auto;
+    background: url('header_bg.jpeg') repeat;
+  }
+}
+
+footer {
+  width: 100%;
+  position: absolute;
+
+  section {
+    padding: 20px 30px;
+    width: 910px;
+    height: 81px;
+    margin: auto;
+    background: url('footer_bg.png') repeat;
+  }
+
+  h2 {
+    margin-top: 0px;
+    margin: 0px;
+    padding: 0px 0px 10px 0px;
+    letter-spacing: -1px;
+    text-shadow: 1px 1px 1px #FFFFFF;
+    font-size: 18px;
+    color: #2D2D2D;
+  }
+
+  p {
+    margin: 0px;
+    line-height: 150%;
+    text-shadow: 2px 1px 2px #FFFFFF;
+  }
+}
+
+#wrapper {
+  width: 970px;
+  min-height: 700px;
+  margin: auto;
+  position: relative;
+  top: 150px;
+}
+
+#home-main-info {
+  margin: auto;
+
+  h2 {
+    margin-top: 0px;
+    margin: 0px;
+    padding: 40px 0px 0px 0px;
+    letter-spacing: -3px;
+    text-align: center;
+    text-shadow: 2px 2px 2px #FFFFFF;
+    font-weight: normal;
+    font-size: 38px;
+    color: #747474;
+
+    span {
+      font-weight: bold;
+      color: #2D2D2D;
+    }
+  }
+
+}
