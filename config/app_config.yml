@@ -1,0 +1,25 @@
+default:
+  host: "localhost:3000"
+  mailer:
+  delivery_method: safety_mailer
+  allowed_matchers: ["amberbit.com", "krzysztofbieniek.com"]
+  address: 'smtp.gmail.com'
+  port: 587
+  domain: 'krzysztofbieniek.com'
+  authentication: 'plain'
+  user_name: 'kontakt@krzysztofbieniek.com'
+  password: '8ukEsTUB'
+  tls: true
+  sender: 'kontakt@krzysztofbieniek.com'
+
+development:
+
+test:
+  mailer:
+    delivery_method: test
+
+staging:
+
+production:
+  mailer:
+    delivery_method: 'smtp'

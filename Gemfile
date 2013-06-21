@@ -9,7 +9,7 @@ gem "paperclip", "~> 3.4.0"
 gem "aws-s3"
 gem 'aws-sdk'
 gem "exception_notification"
-
+gem "amberbit-config", git: "https://github.com/Katharsis/amberbit-config.git"
 gem 'sorcery'
 
 group :development do

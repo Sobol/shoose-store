@@ -1,3 +1,9 @@
+GIT
+  remote: https://github.com/Katharsis/amberbit-config.git
+  revision: 29cfb82ddb3b2d5241d2bff217b6bedb1c74a413
+  specs:
+    amberbit-config (1.1.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -262,6 +268,7 @@ PLATFORMS
 
 DEPENDENCIES
   activerecord-postgresql-adapter
+  amberbit-config!
   asset_sync
   aws-s3
   aws-sdk
