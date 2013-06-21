@@ -194,6 +194,11 @@ button, input[type="button"], input[type="reset"], input[type="submit"] {
 
     div.field {
       margin: 7px 0;
+
+      span {
+        position: absolute;
+        left: 250px;
+      }
     }
 
     label {
@@ -214,6 +219,16 @@ button, input[type="button"], input[type="reset"], input[type="submit"] {
       position: static !important;
       width: 10px;
     }
+
+    a {
+      display: inline;
+      text-decoration: underline;
+      margin-left: 20px;
+      font-weight: 700;
+      letter-spacing: -1px;
+      font-size: 18px;
+      color: #2D2D2D;
+    }
   }
 }
 
@@ -232,6 +247,7 @@ button, input[type="button"], input[type="reset"], input[type="submit"] {
   }
 
   span {
+    position: static !important;
     display:inline-block;
     width:24px;
     height:24px;
@@ -240,4 +256,8 @@ button, input[type="button"], input[type="reset"], input[type="submit"] {
     cursor: pointer;
     margin-top: 5px;
   }
+}
+
+.field_with_errors {
+  display: inline;
 }
