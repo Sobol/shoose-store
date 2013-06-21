@@ -1,5 +1,5 @@
 ShooseStore::Application.routes.draw do
-  resources :companies, only: [:index]
+  resources :companies, only: [:index, :show]
 
   match 'about' => 'static_pages#about', :as => :about_page
   match 'contact' => 'static_pages#contact', :as => :contact_page
@@ -10,10 +10,16 @@ ShooseStore::Application.routes.draw do
 
   resources :password_resets
   resources :sessions
-  resources :users do
+  resources :users, :only => [:new, :create] do
     member do
       get :activate
     end
   end
+
+  namespace :admin do
+    resources :companies
+    resources :users, :only => [:index, :update, :show, :destroy]
+  end
+
   root :to => 'companies#index'
 end

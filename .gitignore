@@ -17,7 +17,7 @@ spec/reports
 test/tmp
 test/version_tmp
 tmp
-
+.env
 doc/
 .DS_Store
 config/.DS_Store

@@ -1,0 +1,25 @@
+<% url = params[:action] == "new" ? admin_companies_path : admin_company_path%>
+<%= form_for @company, :url => url, :html => { :multipart => true } do |f| %>
+  <% if flash[:error] %>
+    <p class="error"><%= flash[:error] %></p>
+  <% end %>
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field admin-edit-description">
+    <%= f.label :description %>
+    <%= f.text_area :description %>
+  </div>
+  <div class="field admin-edit-logo">
+    <%= f.file_field :logo %>
+    <% if params[:action] == "edit" %>
+      <%= image_tag(@company.logo(:medium)) %>
+    <% end %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Zapisz" %>
+    <%= link_to "Cofnij", admin_companies_path, :class => "back-link" %>
+  </div>
+<% end %>
+

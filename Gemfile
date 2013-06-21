@@ -11,6 +11,8 @@ gem 'aws-sdk'
 gem "exception_notification"
 gem "amberbit-config", git: "https://github.com/Katharsis/amberbit-config.git"
 gem 'sorcery'
+gem 'will_paginate'
+gem 'foreman'
 
 group :development do
   gem 'letter_opener'

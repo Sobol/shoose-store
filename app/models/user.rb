@@ -16,6 +16,10 @@ class User < ActiveRecord::Base
 
   before_create :setup_auth_token
 
+  def admin?
+    self.role == "admin"
+  end
+
   private
 
   def setup_auth_token

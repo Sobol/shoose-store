@@ -22,13 +22,18 @@
       </div>
       <%= link_to "Krszysztof Bieniek", root_path, id: "logo"%>
       <ul id="menu">
-        <li>
+        <% if current_user && current_user.admin? %>
+          <li class="<%= 'active' if params[:controller]=='admin/companies' %>">
+            <%= link_to "Firmy", admin_companies_path %>
+          </li>
+        <% end %>
+        <li class="<%= 'active' if params[:controller]=='companies' %>">
           <%= link_to "Obuwie", companies_path %>
         </li>
-        <li>
+        <li class="<%= 'active' if params[:controller]=='static_pages' && params[:acion]=="about" %>">
           <%= link_to "O nas", about_page_path %>
         </li>
-        <li>
+        <li class="<%= 'active' if params[:controller]=='static_pages' && params[:acion]=="contact" %>">
           <%= link_to "Kontakt", contact_page_path %>
         </li>
       </ul>
@@ -36,7 +41,7 @@
   </header>
 
   <section id="wrapper" class="clearfix">
-    <section class="main">
+    <section class="main clearfix">
       <%= yield %>
     </section>
   </section>

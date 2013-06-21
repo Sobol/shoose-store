@@ -1,0 +1,16 @@
+<div id="companies" class="clearfix">
+  <% @companies.each do |company|%>
+    <div class="company">
+      <%= link_to company.name, edit_admin_company_path(company), class:"company-name"%>
+      <%= link_to "Zobacz wzory", edit_admin_company_path(company), class:"show-company"%>
+      <%= image_tag company.logo(:medium), class:"company-logo"%>
+    </div>
+  <% end %>
+  <%= link_to new_admin_company_path do %>
+    <div class="company new-company">
+      <span class="company-name">
+        Dodaj firmę
+      </span>
+    </div>
+  <% end %>
+</div>

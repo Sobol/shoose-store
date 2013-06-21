@@ -25,19 +25,20 @@ html {
 body {
   width: 100%;
   min-height: 900px;
-  background: url('main_bg.jpg') no-repeat;
+  background: url('main_bg.jpg') repeat-y top center;
+  background-size: 100%;
 }
 
 header {
   width: 100%;
-  position: absolute;
-  margin-top: 110px;
+  position: relative;
+  padding-top: 110px;
 
   section {
     width: 970px;
     height: 70px;
     margin: auto;
-    background: url('header_bg.jpeg') repeat;
+    background: url('header_bg.jpeg') no-repeat;
 
     #logo {
       margin: 17px 0 0 30px;
@@ -54,7 +55,7 @@ header {
       padding: 28px 5px 0px 0px;
       margin: 0;
       float: right;
-      width: 300px;
+      width: 400px;
       height: 85px;
       list-style: none;
       line-height: normal;
@@ -74,6 +75,10 @@ header {
           color: #FFFFFF;
         }
       }
+
+      li.active {
+        background: url("menu_active.jpeg") no-repeat center bottom;
+      }
     }
   }
 }
@@ -81,7 +86,7 @@ header {
 footer {
   width: 100%;
   position: relative;
-  top: 230px;
+  margin-top: 40px;
 
   section {
     padding: 20px 30px;
@@ -113,7 +118,6 @@ footer {
   min-height: 500px;
   margin: auto;
   position: relative;
-  top: 200px;
 }
 
 #home-main-info {
@@ -151,8 +155,8 @@ footer {
   text-align: right;
 
   div {
-  width: 970px;
-  margin: auto;
+    width: 970px;
+    margin: auto;
   }
 
   a {
@@ -167,7 +171,7 @@ footer {
   }
 }
 
-button, input[type="button"], input[type="reset"], input[type="submit"] {
+button, input[type="button"], input[type="reset"], input[type="submit"], .back-link {
   height: 36px;
   border: 0 none;
   background: url('button.png') repeat;
@@ -182,6 +186,15 @@ button, input[type="button"], input[type="reset"], input[type="submit"] {
   width: auto !important;
   left: auto !important;
   margin-top: 7px;
+  float: left;
+}
+
+.back-link {
+  color: #FFFFFF !important;
+  margin-left: 100px !important;
+  text-decoration: none !important;
+  font-size: 16px;
+  line-height: 36px;
 }
 
 .main {
@@ -194,6 +207,7 @@ button, input[type="button"], input[type="reset"], input[type="submit"] {
 
     div.field {
       margin: 7px 0;
+      min-height: 25px;
 
       span {
         position: absolute;
@@ -209,10 +223,14 @@ button, input[type="button"], input[type="reset"], input[type="submit"] {
       color: #2D2D2D;
     }
 
-    input {
+    input, textarea {
       position: absolute;
       left: 250px;
       width: 300px;
+    }
+
+    textarea {
+      height: 200px;
     }
 
     #remember_me {

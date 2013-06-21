@@ -1,0 +1,63 @@
+#companies {
+  margin-top: 40px;
+  .company {
+    width: 470px;
+    height: 250px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    background-color: #ffffff;
+    margin: 10px 0px 10px 0;
+    float: left;
+    position: relative;
+
+    .company-name {
+      float: left;
+      letter-spacing: -2px;
+      font-size: 25px;
+      font-weight: bold;
+      color: #2D2D2D;
+      margin: 25px 0 0 30px;
+    }
+
+    .show-company {
+      float: right;
+      text-align: right;
+      background: url("link_arrow.jpeg") no-repeat right 5px;
+      margin: 30px 10px 0px 0px;
+      padding: 0px 20px 0px 0px;
+      font-size: 15px;
+      color: #5E5E5E;
+    }
+
+    .description {
+      font-size: 15px;
+      color: rgb(94, 94, 94);
+    }
+
+    .company-logo {
+      float: left;
+      position: absolute;
+      left: 20px;
+      top: 80px;
+    }
+  }
+
+  .company:nth-child(odd) {
+    margin: 10px 30px 10px 0;
+  }
+
+  .new-company {
+    float: left;
+    margin: 10px 0px 10px 0 !important;
+    background: #ffffff url("add.png") no-repeat center center;
+  }
+}
+
+.admin-edit-description {
+  height: 230px;
+}
+
+.admin-edit-logo img {
+  position: relative;
+  float: right;
+  top: -270px;
+}

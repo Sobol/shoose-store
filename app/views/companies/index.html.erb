@@ -5,3 +5,14 @@
     Zyczymy milego dnia.
   </h2>
 </div>
+
+<div id="companies">
+  <% @companies.each do |company|%>
+    <div class="company">
+      <%= link_to company.name, company_path(company), class:"company-name"%>
+      <%= link_to "Zobacz wzory", company_path(company), class:"show-company"%>
+      <%= image_tag company.logo(:medium), class:"company-logo"%>
+    </div>
+  <% end %>
+</div>
+
