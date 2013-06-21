@@ -80,7 +80,8 @@ header {
 
 footer {
   width: 100%;
-  position: absolute;
+  position: relative;
+  top: 230px;
 
   section {
     padding: 20px 30px;
@@ -109,10 +110,10 @@ footer {
 
 #wrapper {
   width: 970px;
-  min-height: 700px;
+  min-height: 500px;
   margin: auto;
   position: relative;
-  top: 150px;
+  top: 200px;
 }
 
 #home-main-info {
@@ -146,4 +147,97 @@ footer {
   box-shadow: inset 0px 1px 0px 0px #484848, inset 0px -1px 0px 0px #3c3c3c, inset 0px 0px 0px 1px #404040;
   border: solid 1px #000000;
   z-index: 1;
+  color: #FFFFFF;
+  text-align: right;
+
+  div {
+  width: 970px;
+  margin: auto;
+  }
+
+  a {
+    display: inline;
+    margin: 0 5px;
+    height: 57px;
+    letter-spacing: -1px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    color: #FFFFFF;
+  }
+}
+
+button, input[type="button"], input[type="reset"], input[type="submit"] {
+  height: 36px;
+  border: 0 none;
+  background: url('button.png') repeat;
+  display: block;
+  letter-spacing: -1px;
+  text-align: center;
+  text-shadow: 1px 1px 1px #2C2C2C;
+  font-weight: bold;
+  font-size: 16px;
+  color: #FFFFFF;
+  padding: 0px 20px;
+  width: auto !important;
+  left: auto !important;
+  margin-top: 7px;
+}
+
+.main {
+  form {
+    width: 870px;
+    min-height: 500px;
+    padding: 30px 50px 0;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+
+    div.field {
+      margin: 7px 0;
+    }
+
+    label {
+      margin: 0px;
+      font-weight: 700;
+      letter-spacing: -1px;
+      font-size: 18px;
+      color: #2D2D2D;
+    }
+
+    input {
+      position: absolute;
+      left: 250px;
+      width: 300px;
+    }
+
+    #remember_me {
+      position: static !important;
+      width: 10px;
+    }
+  }
+}
+
+#uniform-remember_me {
+  display: inline;
+  position: relative;
+  top: 6px;
+
+  input {
+    display: none;
+  }
+
+  span.checked {
+    background:url('checkbox@2x.png') no-repeat;
+    background-position: 0 -47px;
+  }
+
+  span {
+    display:inline-block;
+    width:24px;
+    height:24px;
+    background:url('checkbox@2x.png') no-repeat;
+    background-position: 0 -24px;
+    cursor: pointer;
+    margin-top: 5px;
+  }
 }

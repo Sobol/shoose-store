@@ -12,4 +12,13 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require_tree .
+//= require jquery.uniform
+///= require_tree .
+
+
+$(function() {
+  $("#remember_me").uniform();
+  $("#uniform-remember_me").click(function(e){
+    $(this).find("input").click();
+  });
+});
